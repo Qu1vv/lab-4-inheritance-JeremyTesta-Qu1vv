@@ -9,23 +9,33 @@ long Animal::counterID = 1;
 
 // Default constructor
 Animal::Animal()
-    : age(0), alive(true), id(counterID++), x(0.0), y(0.0), height(0.0) {}
+    : age(0), alive(true), id(counterID++), x(0.0), y(0.0), height(0.0) {
+    cout << "Animal default constructor called" <<endl;
+}
 
 // 3-parameter constructor
 Animal::Animal(int age, double x, double y)
-    : age(age), alive(true), id(counterID++), x(x), y(y), height(0.0) {}
+    : age(age), alive(true), id(counterID++), x(x), y(y), height(0.0) {
+    cout << "Animal 3-param constructor called" <<endl;
+}
 
 // 4-parameter constructor for animals with 3D coords
 Animal::Animal(int age, double x, double y, double height)
-    : age(age), alive(true), id(counterID++), x(x), y(y), height(height) {}
+    : age(age), alive(true), id(counterID++), x(x), y(y), height(height) {
+    cout << "Animal 4-param constructor called" <<endl;
+}
 
 // Copy Constructor
 Animal::Animal(const Animal& otherAnimal)
     : age(otherAnimal.age), alive(otherAnimal.alive),
-      id(counterID++), x(otherAnimal.x), y(otherAnimal.y), height(otherAnimal.height) {}
+      id(counterID++), x(otherAnimal.x), y(otherAnimal.y), height(otherAnimal.height) {
+    cout << "Animal copy constructor called" <<endl;
+}
 
 // Virtual Destructor
-Animal::~Animal() {}
+Animal::~Animal() {
+    cout << "Animal virtual destructor called" <<endl;
+}
 
 // Move method
 void Animal::move(double moveX, double moveY, double moveHeight) {

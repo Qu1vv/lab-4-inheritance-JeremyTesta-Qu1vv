@@ -3,13 +3,21 @@
 
 #include "bird.hpp"
 
-Bird::Bird() : Animal(0, 0.0, 0.0, 0.0) {}
+Bird::Bird() : Animal(0, 0.0, 0.0, 0.0) {
+    cout << "Bird default constructor called" <<endl;
+}
 
-Bird::Bird(int age, double x, double y, double height) : Animal(age, x, y, height) {}
+Bird::Bird(int age, double x, double y, double height) : Animal(age, x, y, height) {
+    cout << "Bird 4-param constructor called" <<endl;
+}
 
-Bird::Bird(const Bird& other) : Animal(other) {}
+Bird::Bird(const Bird& other) : Animal(other) {
+    cout << "Bird copy constructor called" <<endl;
+}
 
-Bird::~Bird() {}
+Bird::~Bird() {
+    cout << "Bird destructor called" <<endl;
+}
 
 // Override move to include three coordinates
 void Bird::move(double newX, double newY, double newHeight) {

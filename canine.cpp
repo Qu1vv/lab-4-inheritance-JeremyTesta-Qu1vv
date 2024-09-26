@@ -4,16 +4,24 @@
 #include "canine.hpp"
 
 // Default constructor
-Canine::Canine() : Animal(0, 0.0, 0.0) {}
+Canine::Canine() : Animal(0, 0.0, 0.0) {
+    cout << "Canine default constructor called" <<endl;
+}
 
 // Constructor with parameters
-Canine::Canine(int age, double x, double y) : Animal(age, x, y) {}
+Canine::Canine(int age, double x, double y) : Animal(age, x, y) {
+    cout << "Canine 3-param constructor called" <<endl;
+}
 
 // Copy Constructor
-Canine::Canine(const Canine& other) : Animal(other) {}
+Canine::Canine(const Canine& other) : Animal(other) {
+    cout << "Canine copy constructor called" <<endl;
+}
 
 // Destructor
-Canine::~Canine() {}
+Canine::~Canine() {
+    cout << "Canine destructor called" <<endl;
+}
 
 // Override move method
 void Canine::move(double moveX, double moveY, double moveHeight) {
@@ -45,7 +53,7 @@ void Canine::hunt(Animal* prey) {
 
 // Overload insertion operator
 ostream& operator<<(ostream& os, const Canine& canine){
-    os << "Canine\n";  // Print any specific Canine data if needed
+    os << "Canine\n";
     os << static_cast<const Animal&>(canine); // Cast to Animal to call Animal's operator<<
     return os;  // Return the output stream
 }

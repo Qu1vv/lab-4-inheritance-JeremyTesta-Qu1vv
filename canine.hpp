@@ -26,7 +26,6 @@ public:
     void move(double moveX, double moveY, double height) override;
     void eat() override;
     void sleep() override;
-
     // New method for hunting
     void hunt(Animal* prey);
 
