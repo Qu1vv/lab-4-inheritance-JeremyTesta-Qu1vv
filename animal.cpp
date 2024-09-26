@@ -1,5 +1,3 @@
-//Jeremy Testa
-//A01378143
 
 #include "animal.hpp"
 using namespace std;
@@ -42,24 +40,25 @@ void Animal::move(double moveX, double moveY, double moveHeight) {
     x = moveX;
     y = moveY;
     height = moveHeight; // Set height
-    cout << "Animal moved to coordinates (" << x << ", " << y << ", " << height << ")." << endl;
+    cout << getType() << " moved to coordinates (" << x << ", " << y << ", " << height << ")." << endl;
 }
 
+// Sleep method
 void Animal::sleep() {
-    cout << "Animal is sleeping." << endl;
+    cout << getType() << " is sleeping." << endl;
 }
-
+// Eat method
 void Animal::eat() {
-    cout << "Animal is eating." << endl;
+    cout << getType() <<" is eating." << endl;
 }
-
+// Alive status method
 void Animal::setAlive(bool status) {
     alive = status;
 }
 
 // Overload insertion operator
 ostream& operator<<(ostream& os, const Animal& animal) {
-    os << "Animal ID: " << animal.id << ", Age: " << animal.age
+    os << animal.getType() << " ID: " << animal.id << ", Age: " << animal.age
        << ", Alive: " << (animal.alive ? "yes" : "no")
        << ", Location: (" << animal.x << ", " << animal.y << ", " << animal.height << ")";
     return os;

@@ -1,5 +1,3 @@
-// bird.hpp
-// Created by jerem on 2024-09-25.
 
 #ifndef BIRD_HPP
 #define BIRD_HPP
@@ -25,6 +23,10 @@ public:
   void sleep() override;
   void eat() override;
 
+  //getter for type
+  string getType() const override {
+    return "Bird";
+  }
   // Overload insertion operator
   friend ostream& operator<<(ostream& os, const Bird& bird);
 };

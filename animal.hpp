@@ -39,12 +39,14 @@ public:
     virtual void eat();
     void setAlive(bool status);
 
-    // Getter methods for when coords are inaccessible
+    // Getter methods for when members are inaccessible
     int getID() const {return id;}
     double getX() const { return x; }
     double getY() const { return y; }
     double getHeight() const { return height; }
-
+    virtual string getType() const {
+        return "Animal";
+    }
     friend ostream& operator<<(ostream& os, const Animal& animal);
 };
 

@@ -1,5 +1,3 @@
-// canine.hpp
-// Created by jerem on 2024-09-25.
 
 #ifndef CANINE_HPP
 #define CANINE_HPP
@@ -28,7 +26,11 @@ public:
     void sleep() override;
     // New method for hunting
     void hunt(Animal* prey);
+    //getter for type
+    string getType() const override {
 
+        return "Canine";
+    }
     // Overload insertion operator
     friend ostream& operator<<(ostream& os, const Canine& canine);
 };
