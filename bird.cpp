@@ -24,7 +24,6 @@ Bird::~Bird() {
 // Override move to include three coordinates
 void Bird::move(double newX, double newY, double newHeight) {
     Animal::move(newX, newY, newHeight);
-    //cout << getType()<< " moved to coordinates (" << newX << ", " << newY << ", " << newHeight << ")." << endl;
 }
 
 // Override sleep method

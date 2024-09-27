@@ -10,7 +10,7 @@ int main() {
 
     Animal* animal = new Animal(10, 3.0, 8.0);
     Bird* bird = new Bird(15, 6.0, 3.0, 7.0);
-    Canine* canine = new Canine(15, 8.0, 1.0);
+    Canine* canine = new Canine(12, 8.0, 1.0);
 
     cout << "\n---Print all animals---" << endl;
     cout << *animal << endl;
